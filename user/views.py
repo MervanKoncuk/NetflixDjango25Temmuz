@@ -7,6 +7,7 @@ from django.core.mail import send_mail
 from django.conf import settings
 # Create your views here.
 def userRegister(request):
+    # kayıt olma formu
     if request.method == 'POST':
         username = request.POST['username']
         email = request.POST['email']
@@ -50,6 +51,7 @@ def userRegister(request):
     return render(request, 'user/register.html')
 
 def userLogin(request):
+    # login
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
